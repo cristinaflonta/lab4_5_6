@@ -2,13 +2,13 @@ package ro.ubb.exam.Domain;
 
 public class Client extends  Entity<Long> {
 
-    private String name, addres, email;
+    private String name, email;
     private int phone;
 
-    public Client(String name, String email, int phone) {
+    public Client(String name, String email) {
         this.name = name;
         this.email = email;
-        this.phone = phone;
+        //this.phone = phone;
     }
 
     public String getName() {
@@ -27,24 +27,20 @@ public class Client extends  Entity<Long> {
         this.email = email;
     }
 
-    public int getPhone() {
+    /*public int getPhone() {
         return phone;
     }
 
     public void setPhone(int phone) {
         this.phone = phone;
     }
-
+*/
     @Override
     public String toString() {
         return "Client{" +
                 "name='" + name + '\'' +
                 ", email='" + email + '\'' +
-                ", phone=" + phone +
                 '}';
     }
-
-
-
 
 }

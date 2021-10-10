@@ -20,7 +20,5 @@ public class HolidayValidator extends Validator<Holiday> {
         if (!errors.equals("")) {
             throw new ValidatorException(errors);
         }
-
-
     }
 }

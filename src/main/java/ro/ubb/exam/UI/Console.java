@@ -73,17 +73,18 @@ public class Console {
 
     private void handleAddClient() {
         try {
-            //System.out.print("Enter id: ");
-            //Long id = scanner.nextLong();
+            System.out.print("Enter id: ");
+            Long id = scanner.nextLong();
             System.out.print("Enter client name: ");
+            scanner.nextLine();
             String clientName = scanner.nextLine();
             System.out.print("Enter client email: ");
             String clientEmail = scanner.nextLine();
-            System.out.print("Enter client phone: ");
-            int phoneNumber = Integer.parseInt(scanner.nextLine());
+            /*System.out.print("Enter client phone: ");
+            int phoneNumber = Integer.parseInt(scanner.nextLine());*/
 
-            Client client = new Client(clientName, clientEmail, phoneNumber);
-            //client.setId(id);
+            Client client = new Client(clientName, clientEmail);
+            client.setId(id);
             clientService.addClient(client);
 
         } catch (Exception ex) {
@@ -95,15 +96,16 @@ public class Console {
         try {
             System.out.print("Enter id: ");
             Long id = scanner.nextLong();
+            scanner.nextLine();
             System.out.print("Enter client name: ");
             scanner.nextLine();
             String clientName = scanner.nextLine();
             System.out.print("Enter client email: ");
             String clientEmail = scanner.nextLine();
-            System.out.print("Enter client phone: ");
-            int phoneNumber = Integer.parseInt(scanner.nextLine());
+            /*System.out.print("Enter client phone: ");
+            int phoneNumber = Integer.parseInt(scanner.nextLine());*/
 
-            clientService.updateClient(id, clientName, clientEmail, phoneNumber);
+            clientService.updateClient(id, clientName, clientEmail);
 
         } catch (Exception ex) {
             ex.printStackTrace();

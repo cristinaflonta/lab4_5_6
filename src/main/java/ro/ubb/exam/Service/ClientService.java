@@ -28,19 +28,17 @@ public class ClientService {
     }
 
 
-
     public Optional<Client> deleteClient(Client client) throws ValidatorException {
         Optional<Client> clientOptional = clientRepository.delete(client.getId());
         return clientOptional;
     }
 
-    public Optional<Client> updateClient(Long id, String name, String email, int phone) {
+    public Optional<Client> updateClient(Long id, String name, String email) {
         Optional<Client> existing = clientRepository.findOne(id);
         if (existing.isPresent()) {
             Client client = existing.get();
             client.setName(name);
             client.setEmail(email);
-            client.setPhone(phone);
             clientRepository.update(client);
         }else {
             System.out.println("this client does not exist");

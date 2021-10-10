@@ -12,7 +12,7 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 /**
- * @author lucas.
+ * @author.
  */
 public class InMemoryRepository<ID, T extends Entity<ID>> implements Repository<ID, T> {
 

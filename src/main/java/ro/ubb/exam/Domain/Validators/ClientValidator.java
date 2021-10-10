@@ -17,7 +17,5 @@ public class ClientValidator extends Validator<Client> {
         if (email.isEmpty()){
             throw new ValidatorException("Email is mandatory");
         }
-
-
     }
 }

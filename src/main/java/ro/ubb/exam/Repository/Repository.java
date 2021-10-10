@@ -8,7 +8,7 @@ import java.util.Optional;
 /**
  * Interface for generic CRUD operations on a repository for a specific type.
  *
- * @author lucas.
+ * @author
  *
  */
 public interface Repository<ID, T extends Entity<ID>> {

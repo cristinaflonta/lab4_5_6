@@ -4,7 +4,6 @@ public class Holiday extends Entity<Long> {
 
     private String name, destination;
     private float price;
-    private int availableSeats;
 
     public Holiday(String name, String destination, float price) {
         this.name = name;
