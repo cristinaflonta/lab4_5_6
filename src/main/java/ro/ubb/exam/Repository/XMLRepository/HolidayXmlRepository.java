@@ -5,6 +5,10 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import ro.ubb.exam.Domain.Holiday;
+<<<<<<< HEAD
+=======
+import ro.ubb.exam.Domain.Entity;
+>>>>>>> origin/master
 import ro.ubb.exam.Domain.Exceptions.ValidatorException;
 import ro.ubb.exam.Domain.Validators.Validator;
 import ro.ubb.exam.Repository.InMemoryRepository;
@@ -120,7 +124,11 @@ public class HolidayXmlRepository extends InMemoryRepository<Long, Holiday> {
     }
 
 
+<<<<<<< HEAD
     private void removeHolidayFromDom(Long aLong, NodeList nodeList) {
+=======
+    private Optional<Holiday> removeHolidayFromDom(Long aLong, NodeList nodeList) {
+>>>>>>> origin/master
         for (int i = 0; i < nodeList.getLength(); i++) {
             Node node = nodeList.item(i);
             if (!(node instanceof Element)) {
@@ -131,13 +139,25 @@ public class HolidayXmlRepository extends InMemoryRepository<Long, Holiday> {
                 node.getParentNode().getParentNode().removeChild(node.getParentNode());
             }
         }
+<<<<<<< HEAD
     }
         @Override
         public Optional<Holiday> update(Holiday entity) throws ValidatorException {
             Optional<Holiday> holidayOptional = super.update(entity);
             NodeList nodeList= document.getElementsByTagName("id");
+=======
+
+        @Override
+        public Optional<Holiday> update (Holiday entity) throws ValidatorException {
+            Optional<Holiday> holidayOptional = super.update(entity);
+            nodeList = document.getElementsByTagName("id");
+>>>>>>> origin/master
             removeHolidayFromDom(entity.getId(), nodeList);
             saveToXml(entity);
             return holidayOptional;
         }
+<<<<<<< HEAD
+=======
+    }
+>>>>>>> origin/master
 }
