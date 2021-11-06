@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<clients>
+    <client>
+        <id>1</id>
+        <name>radu</name>
+        <email>adcd@ass.ro</email>
+    </client>
+    <client>
+        <id>2</id>
+        <name>bob</name>
+        <email>adcd@ass.ro</email>
+    </client>
+    <client>
+        <id>3</id>
+        <name>ABC</name>
+        <email>adcd@ass.ro</email>
+    </client>
+    <client>
+        <id>4</id>
+        <name>alex</name>
+        <email>adcd@ass.ro</email>
+    </client>
+</clients>

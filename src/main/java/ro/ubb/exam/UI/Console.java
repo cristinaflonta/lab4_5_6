@@ -102,8 +102,6 @@ public class Console {
             String clientName = scanner.nextLine();
             System.out.print("Enter client email: ");
             String clientEmail = scanner.nextLine();
-            /*System.out.print("Enter client phone: ");
-            int phoneNumber = Integer.parseInt(scanner.nextLine());*/
 
             clientService.updateClient(id, clientName, clientEmail);
 
@@ -122,7 +120,7 @@ public class Console {
             System.out.print("Enter holiday destination: ");
             String holidayDestination = scanner.nextLine();
             System.out.print("Enter holiday price: ");
-            float holidayPrice = Float.parseFloat(scanner.nextLine());
+            long holidayPrice = Long.parseLong(scanner.nextLine());
 
             holidayService.updateHoliday(id, holidayName, holidayDestination, holidayPrice);
 
@@ -142,7 +140,7 @@ public class Console {
             System.out.print("Enter holiday destination: ");
             String holidayDestination = scanner.nextLine();
             System.out.print("Enter holiday price: ");
-            float holidayPrice = Float.parseFloat(scanner.nextLine());
+            long holidayPrice = Long.parseLong(scanner.nextLine());
 
 
             Holiday holiday = new Holiday(holidayName, holidayDestination, holidayPrice);

@@ -33,7 +33,7 @@ public class HolidayService {
     }
 
 
-    public Optional<Holiday> updateHoliday(Long id, String name, String destination, float price)  {
+    public Optional<Holiday> updateHoliday(Long id, String name, String destination, long price)  {
         Optional<Holiday> existing = holidayRepository.findOne(id);
         if (existing.isPresent() ) {
             Holiday holiday = existing.get();

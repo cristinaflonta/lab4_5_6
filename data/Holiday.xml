@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<holiday>
+    <holiday>
+        <id>10</id>
+        <name>Marin Maria</name>
+        <destination>Athena</destination>
+        <price>2000</price>
+    </holiday>
+    <holiday>
+        <id>20</id>
+        <name>Mihai Alin</name>
+        <destination>Londra</destination>
+        <price>500</price>
+    </holiday>
+    <holiday>
+        <id>30</id>
+        <name>Bob Radu</name>
+        <destination>Roma</destination>
+        <price>1000</price>
+    </holiday>
+    <holiday>
+        <id>40</id>
+        <name>Albulescu Daria</name>
+        <destination>Barcelona</destination>
+        <price>1200</price>
+    </holiday>
+</holiday>
