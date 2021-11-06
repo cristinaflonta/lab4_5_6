@@ -3,9 +3,9 @@ package ro.ubb.exam.Domain;
 public class Holiday extends Entity<Long> {
 
     private String name, destination;
-    private float price;
+    private long price;
 
-    public Holiday(String name, String destination, float price) {
+    public Holiday(String name, String destination, long price) {
         this.name = name;
         this.destination = destination;
         this.price = price;
@@ -27,11 +27,11 @@ public class Holiday extends Entity<Long> {
         this.destination = destination;
     }
 
-    public float getPrice() {
+    public long getPrice() {
         return price;
     }
 
-    public void setPrice(float price) {
+    public void setPrice(long price) {
         this.price = price;
     }
 
