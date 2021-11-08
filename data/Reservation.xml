@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<reservations>
+    <holiday>
+        <holiday-id>11</holiday-id>
+        <clientId>5</clientId>
+        <clientName>alin</clientName>
+        <clientEmail>alin@yahoo.com</clientEmail>
+        <holidayId>3</holidayId>
+        <holidayName>Alps holiday 2020</holidayName>
+        <holidayDestination>Grecia</holidayDestination>
+        <holidayPrice>500</holidayPrice>
+    </holiday>
+    <holiday>
+        <holiday-id>10</holiday-id>
+        <clientId>22</clientId>
+        <clientName>mircea</clientName>
+        <clientEmail>mircea@yahoo.com</clientEmail>
+        <holidayId>3</holidayId>
+        <holidayName>Alps holiday 2020</holidayName>
+        <holidayDestination>Spania</holidayDestination>
+        <holidayPrice>1000</holidayPrice>
+        =
+    </holiday>
+</reservations>
