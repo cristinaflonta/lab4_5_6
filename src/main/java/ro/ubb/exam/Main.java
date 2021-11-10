@@ -17,8 +17,6 @@ import ro.ubb.exam.Service.HolidayService;
 import ro.ubb.exam.Service.ReservationService;
 import ro.ubb.exam.UI.Console;
 
-import java.sql.DriverManager;
-
 public class Main {
     public static void main(String[] args) {
 
@@ -43,7 +41,7 @@ public class Main {
 //        Repository<Long, Reservation> reservationRepository = new ReservationFileRepository(reservationValidator,"data/Reservation.csv");
 
         Repository<Long, Client> clientRepository = new ClientDBRepository(url, user, password, clientValidator);
-        Repository<Long, Holiday> holidayRepository = new HolidayDBRepository(holidayValidator, "data/Holiday.csv");
+        Repository<Long, Holiday> holidayRepository = new HolidayDBRepository(holidayValidator, "data/Holiday.csv", url, user, password, clientValidator);
         Repository<Long, Reservation> reservationRepository = new ReservationDBRepository(reservationValidator, "data/Reservation.csv");
 
         ClientService clientService = new ClientService(clientRepository);
