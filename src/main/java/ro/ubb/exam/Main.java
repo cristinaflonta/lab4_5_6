@@ -20,13 +20,13 @@ import ro.ubb.exam.UI.Console;
 public class Main {
     public static void main(String[] args) {
 
-//        String url = System.getProperty("url");
-//        String password = System.getProperty("password");
-//        String user = System.getProperty("user");
+        String url = System.getProperty("url");
+        String password = System.getProperty("password");
+        String user = System.getProperty("user");
 
-        String url = "jdbc:postgresql://localhost:5432/agency";
-        String password = "1234";
-        String user = "postgres";
+//        String url = "jdbc:postgresql://localhost:5432/agency";
+//        String password = "1234";
+//        String user = "postgres";
 
         Validator<Client> clientValidator = new ClientValidator();
         Validator<Holiday> holidayValidator = new HolidayValidator();
@@ -41,8 +41,8 @@ public class Main {
 //        Repository<Long, Reservation> reservationRepository = new ReservationFileRepository(reservationValidator,"data/Reservation.csv");
 
         Repository<Long, Client> clientRepository = new ClientDBRepository(url, user, password, clientValidator);
-        Repository<Long, Holiday> holidayRepository = new HolidayDBRepository(holidayValidator, "data/Holiday.csv", url, user, password, clientValidator);
-        Repository<Long, Reservation> reservationRepository = new ReservationDBRepository(reservationValidator, "data/Reservation.csv");
+        Repository<Long, Holiday> holidayRepository = new HolidayDBRepository(url, user, password, holidayValidator);
+        Repository<Long, Reservation> reservationRepository = new ReservationDBRepository(url, user, password, reservationValidator);
 
         ClientService clientService = new ClientService(clientRepository);
         HolidayService holidayService = new HolidayService(holidayRepository);
